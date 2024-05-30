@@ -8,7 +8,7 @@ import { Usuario } from '../../Model/usuario';
 })
 
 export class UsuarioService {
-  private API_SERVER = "/api/";
+  private API_SERVER = "https://refreshing-generosity-production.up.railway.app/";
   constructor(private httpClient : HttpClient) { 
   }
 
