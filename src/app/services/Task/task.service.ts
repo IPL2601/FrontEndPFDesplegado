@@ -8,7 +8,7 @@ import { Task } from '../../Model/Task';
 })
 export class TaskService {
 
-  private API_SERVER = "https://refreshing-generosity-production.up.railway.app/";
+  private API_SERVER = "/api/";
   constructor(private httpClient : HttpClient) {
     
   }
