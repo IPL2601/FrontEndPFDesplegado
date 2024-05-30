@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+<section class="home">
+    <div class="task-details" *ngIf="taskReq">
+        <h2 class="text">Nombre Tarea: {{ taskReq.task_NOM }}</h2>
+        <p class="text">Descripción Tarea: {{ taskReq.task_DESC }}</p>
+        <p class="text">Prioridad: {{ taskReq.task_PRI }}</p>
+        <p class="text">Fecha: {{ taskReq.task_DATE | date }}</p>
+        <p class="text">Realizada: {{ taskReq.task_DONE ? 'Sí' : 'No' }}</p>
+    </div>
+    <div class="task-form" *ngIf="task">
+        <h2>Editar Tarea</h2>
+        <form (ngSubmit)="updateTask()" #taskForm="ngForm">
+            <div class="form-group">
+                <label for="taskName">Nombre de la Tarea</label>
+                <input type="text" id="taskName" name="taskName" [(ngModel)]="task.task_NOM" required>
+            </div>
+            <div class="form-group">
+                <label for="taskDescription">Descripción de la Tarea</label>
+                <textarea id="taskDescription" name="taskDescription" [(ngModel)]="task.task_DESC" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="taskPriority">Prioridad</label>
+                <select id="taskPriority" name="taskPriority" [(ngModel)]="task.task_PRI" required>
+                    <option value="1">Baja</option>
+                    <option value="2">Media</option>
+                    <option value="3">Alta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="taskDate">Fecha</label>
+                <input type="date" id="taskDate" name="taskDate" [(ngModel)]="task.task_DATE" required>
+            </div>
+            <div class="form-group">
+                <button type="button" (click)="doTask()" [ngClass]="{'done': task.task_DONE, 'not-done': !task.task_DONE}">
+                    {{ task.task_DONE ? 'Dejar de Hacer' : 'Hacer' }}
+                </button>
+            </div>
+            <button type="submit">Guardar Cambios</button>
+            <button type="button" (click)="deleteTask()" class="delete-button">Borrar Tarea</button>
+        </form>
+    </div>
+</section>

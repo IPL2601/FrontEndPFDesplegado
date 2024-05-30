@@ -1,0 +1,22 @@
+<!-- register.component.html -->
+<div class="container">
+  <div class="login-box">
+    <h2>Registrarse</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="inputEmail">Correo Electrónico</label>
+        <input type="email" id="usu_NOM" formControlName="usu_NOM" placeholder="Correo Electrónico" required />
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">Contraseña</label>
+        <input type="password" id="usu_PASS" formControlName="usu_PASS" placeholder="Contraseña" required />
+      </div>
+      <div class="form-group">
+        <label for="inputConfirmPassword">Confirmar Contraseña</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirmar Contraseña" required />
+      </div>
+      <button type="submit" [disabled]="registerForm.invalid">Registrarse</button>
+    </form>
+    <a href="/login">¿Ya tienes una cuenta? Inicia Sesión</a>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<section class="home">
+  <div class="calendar">
+    <div class="header">
+      <button (click)="previousMonth()"><i class='bx bxs-left-arrow-alt' ></i></button>
+      <div>{{ currentMonth.format("MMMM YYYY") }}</div>
+      <button (click)="nextMonth()"><i class='bx bxs-right-arrow-alt' ></i></button>
+    </div>
+    <div class="weekdays">
+      <div
+        *ngFor="let day of ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']"
+      >
+        {{ day }}
+      </div>
+    </div>
+    <div class="weeks">
+      <div class="week" *ngFor="let week of weeks">
+        <div
+          class="day"
+          *ngFor="let dateInfo of week.days"
+          [class.today]="isToday(dateInfo.date)"
+        >
+          <span>{{ dateInfo.date.date() }}</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

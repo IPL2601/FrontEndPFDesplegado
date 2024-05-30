@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Form Container */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: var(--form-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: var(--primary-color-light);
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.prioridad-options {
+  display: flex;
+  gap: 10px;
+}
+
+.flag {
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  width: 70px;
+  transition: transform 0.3s;
+}
+
+.flag.low {
+  background-color: var(--card-color-low);
+  
+  
+}
+
+.flag.medium {
+  background-color: var(--card-color-medium);
+}
+
+.flag.high {
+  background-color: var(--card-color-high);
+}
+
+.flag.selected {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background-color: var(--buttom-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--buttom-color), 10%);
+}
+
+/* Additional Styles */
+.text {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}

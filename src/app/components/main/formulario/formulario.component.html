@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<section class="home">
+    <div class="text">Entrada</div>
+    <main class="form">
+        <form id="anadirTarea" [formGroup]="taskForm" (ngSubmit)="onSubmit()" method="post">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" formControlName="task_NOM">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" formControlName="task_DESC"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" formControlName="task_DATE">
+            </div>
+            <div class="form-group prioridad">
+                <label>Prioridad:</label>
+                <div class="prioridad-options">
+                    <div class="flag low" (click)="setPriority(1)" [class.selected]="taskForm.get('task_PRI')?.value === 1">Baja</div>
+                    <div class="flag medium" (click)="setPriority(2)" [class.selected]="taskForm.get('task_PRI')?.value === 2">Media</div>
+                    <div class="flag high" (click)="setPriority(3)" [class.selected]="taskForm.get('task_PRI')?.value === 3">Alta</div>
+                </div>
+            </div>
+            <button type="submit">Crear</button>
+        </form>
+    </main>
+</section>

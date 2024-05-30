@@ -1,0 +1,73 @@
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%; /* Ajusta el ancho al 75% de la pantalla */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.header {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 3000px;
+  margin-bottom: 10px;
+  color: var(--text-color-card);
+}
+.header button{
+ width: 300px;
+ background-color: var(--primary-color);
+ border-radius: 40px;
+}
+
+.weekdays, .weeks {
+  display: flex;
+  flex-direction: column;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: var(--text-color-card);
+  text-align: center;
+  font-weight: bold;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  position: relative;
+  padding: 20px; /* Aumenta el padding para hacer los días más grandes */
+  border: 1px solid ;
+  border-color: var(--border-color);
+  height: 120px; /* Ajusta la altura para permitir espacio para tareas */
+  width: 120px;
+  text-align: left; /* Alinea el contenido a la izquierda */
+  overflow: hidden; /* Oculta el desbordamiento */
+  background-color: var(--primary-color-light);
+}
+
+.day .day-number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.day .tasks {
+  margin-top: 25px; /* Espacio desde el número del día */
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Espacio entre las tareas */
+}
+
+.day.today span{
+  background-color: var(--buttom-color);
+  border-radius: 90%;
+}

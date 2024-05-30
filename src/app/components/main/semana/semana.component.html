@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<section class="home">
+  <div class="text">Semana</div>
+  <main>
+    <div *ngIf="tasks.length > 0; else noTasks">
+      <div class="day-container" *ngFor="let day of daysOfWeek">
+        <h3 class="text">{{ day }}</h3>
+        <ul class="lista-task">
+          <li class="card" *ngFor="let task of getTasksForDay(day)" [ngClass]="{'done-task': task.task_DONE}">
+            <div (click)="navigateToTask(task.task_ID)" [id]="getTaskClass(task.task_PRI)" class="clickable-task">
+              <h2>{{ task.task_NOM }}</h2>
+              <p>{{ task.task_DESC }}</p>
+          </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ng-template #noTasks>
+      <p>No hay tareas disponibles.</p>
+    </ng-template>
+  </main>
+</section>

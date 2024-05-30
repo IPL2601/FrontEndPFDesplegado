@@ -1,0 +1,105 @@
+/* General */
+h2, p {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+.lista-task, .card {
+  list-style: none;
+}
+
+.lista-task {
+  overflow: hidden;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.lista-task .card div {
+  text-decoration: none;
+  color: #000;
+  background: var(--card-color);
+  display: block;
+  height: 11em;
+  width: 11em;
+  padding: 1em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+
+#low-priority {
+  background-color: var(--card-color-low);
+}
+
+#medium-priority {
+  background: var(--card-color-medium);
+}
+
+#high-priority {
+  background: var(--card-color-high);
+}
+
+.lista-task .card {
+  flex: 1 1 calc(25% - 1em); /* Adjust the size of the cards as per the available space */
+}
+
+.lista-task .card h2 {
+  font-size: 140%;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.lista-task .card p {
+  font-family: "Reenie Beanie", arial, sans-serif;
+  font-size: 80%;
+}
+
+/* Card rotation and positioning */
+.lista-task .card:nth-child(odd) div {
+  transform: rotate(-6deg);
+}
+
+.lista-task .card:nth-child(even) div {
+  transform: rotate(4deg);
+  top: 5px;
+}
+
+.lista-task .card:nth-child(3n) div {
+  transform: rotate(-3deg);
+  top: -5px;
+}
+
+.lista-task .card:nth-child(5n) div {
+  transform: rotate(5deg);
+  top: -10px;
+}
+
+.lista-task .card div:hover, .lista-task .card div:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  z-index: 5;
+  position: relative;
+}
+
+/* Day container styling */
+.day-container {
+  margin-bottom: 2em;
+}
+
+.day-container h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+th {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+
+.done-task div {
+  opacity: 50%;
+}

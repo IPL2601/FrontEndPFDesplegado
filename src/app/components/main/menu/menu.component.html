@@ -1,0 +1,106 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!----===== Icons bootstrap ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>Entrada</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../../../../assets/img/Logo.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Doit!</span>
+                    <span class="profession">Choose your path!</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/formulario">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Entrada</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/hoy">
+                            <i class='bx bx-calendar-event icon'></i>
+                            <span class="text nav-text">Hoy</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/semana">
+                            <i class='bx bx-calendar-week icon'></i>
+                            <span class="text nav-text">Semana</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/calendario">
+                            <i class='bx bxs-calendar icon'></i>
+                            <span class="text nav-text">Mes</span>
+                        </a>
+                    </li>
+<!-- 
+                    <li class="nav-link">
+                        <a href="/estadisticas">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Estadísticas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/completadas">
+                            <i class='bx bx-calendar-check icon'></i>
+                            <span class="text nav-text">Completadas</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="/about-us" (click)="logout()">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                      <i class="bx bx-moon icon moon"></i>
+                      <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+        
+                    <div class="toggle-switch">
+                      <span class="switch"></span>
+                    </div>
+                  </li>
+                
+            </div>
+        </div>
+
+    </nav>
+</body>

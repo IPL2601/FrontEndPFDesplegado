@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<section class="home">
+    <div class="text">Hoy</div>
+    <main>
+        <ul class="lista-task" *ngIf="tasks.length > 0; else noTasks">
+            <li class="card" *ngFor="let task of tasks" [ngClass]="{'done-task': task.task_DONE}">
+                <div (click)="navigateToTask(task.task_ID)" [id]="getTaskClass(task.task_PRI)" class="clickable-task">
+                    <h2>{{ task.task_NOM }}</h2>
+                    <p>{{ task.task_DESC }}</p>
+                </div>
+            </li>
+        </ul>
+        <ng-template #noTasks>
+            <p>No hay tareas disponibles.</p>
+        </ng-template>
+    </main>
+</section>
