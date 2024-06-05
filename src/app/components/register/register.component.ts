@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit{
       console.log("Formulario enviado correctamente", response);
       if (response != null) {
         localStorage.setItem('usuario', JSON.stringify(response));
-        localStorage.setItem('usuario', JSON.stringify(response));
+        sessionStorage.setItem('usuario', JSON.stringify(response));
         window.location.href = '/formulario';
       }
     }, error => {
