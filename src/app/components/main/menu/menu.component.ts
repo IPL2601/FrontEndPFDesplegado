@@ -16,5 +16,6 @@ export class MenuComponent implements OnInit{
   }
   logout(): void {
     localStorage.removeItem('usuario');
+    sessionStorage.removeItem('usuario');
   }
 }
